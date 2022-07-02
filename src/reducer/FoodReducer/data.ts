@@ -35,7 +35,7 @@ export const FoodInitialData = [
       "typeOfAmount": "buah/pcs",
       "expiration": "18/07/2022",
       "type": ["Buah/Sayuran"],
-      "address": "Perum Pucang Indah Lestari III Blok C7",
+      "address": "Perum Pucang Lestari III Blok C7",
       "city": "Malang",
       "id": "3"
     },
@@ -47,7 +47,7 @@ export const FoodInitialData = [
       "typeOfAmount": "buah/pcs",
       "expiration": "10/07/2022",
       "type": ["Makanan Berat"],
-      "address": "JL. PANGLIMA SUDIRMAN 1 NO.17",
+      "address": "Jl. Panglima Sudirman No.17",
       "city": "Kediri",
       "id": "4"
     },
@@ -59,7 +59,7 @@ export const FoodInitialData = [
       "typeOfAmount": "kardus",
       "expiration": "10/09/2022",
       "type": ["Makanan Ringan"],
-      "address": "JL. KH. ACHMAD DAHLAN IA/07",
+      "address": "Jl. KH. Achmad Dahlan IA/07",
       "city": "Bandung",
       "id": "5"
     },
@@ -71,7 +71,7 @@ export const FoodInitialData = [
       "typeOfAmount": "buah/pcs",
       "expiration": "10/10/2023",
       "type": ["Makanan ringan"],
-      "address": "PERUM BATU KENCANA BLOK G NO 4",
+      "address": "Perum Batu Kencana Blok G No.4",
       "city": "Jakarta",
       "id": "6"
     },
@@ -83,7 +83,7 @@ export const FoodInitialData = [
       "typeOfAmount": "buah/pcs",
       "expiration": "20/02/2022",
       "type": ["Minuman"],
-      "address": "JL. POTRE KONENG III NO. 51 BSA",
+      "address": "Jl. Potre Koneng III No. 51 BSA",
       "city": "Surabaya",
       "id": "7"
     },
@@ -95,7 +95,7 @@ export const FoodInitialData = [
       "typeOfAmount": "Lusin",
       "expiration": "08/08/2022",
       "type": ["Makanan Ringan"],
-      "address": "address 8",
+      "address": "Dusun Cikareng No.12",
       "city": "city 8",
       "id": "8"
     },
@@ -107,7 +107,7 @@ export const FoodInitialData = [
       "typeOfAmount": "buah/pcs",
       "expiration": "10/07/2022",
       "type": ["Makanan Berat"],
-      "address": "Rumah Masakan Penyetan, Jl. Kejawan Putih Tambak No.12",
+      "address": "Jl. Kejawan Putih Tambak No.12",
       "city": "Surabaya",
       "id": "9"
     },
