@@ -14,6 +14,8 @@ type Food = {
     type: string[],
     address: string,
     city: string,
+    user: string,
+    wa: string,
 }
 
 const CardItem = ({
@@ -27,6 +29,8 @@ const CardItem = ({
         image,
         address,
         city,
+        user,
+        wa,
     } = food
     return(
         <Link href="/DetailMakanan">
@@ -34,7 +38,7 @@ const CardItem = ({
                 <img className="object-cover rounded-none rounded-l-lg w-[150px] h-full" src={food.id.length === 1 || food.id.length == 2  ? image : `/image/${Math.floor(Math.random() * (10 - 1 + 1)) + 1}.jpg`} alt=""/>
                 <div className="flex flex-col justify-between leading-normal p-3">
                     <p className="mb-2 text-md font-bold tracking-tight text-gray-500 dark:text-purple-900">{name}</p>
-                    <p className="mb-3 text-xs text-gray-700 dark:text-gray-400 text-[10px]">Diposting oleh <b>Lathifa Itqonina</b></p>
+                    <p className="mb-3 text-xs text-gray-700 dark:text-gray-400 text-[10px]">Diposting oleh <b>{user}</b></p>
                     <div className="flex grid-cols-2 mb-3">
                         <HiLocationMarker></HiLocationMarker> 
                         <p className="ml-1 text-xs font-semibold dark:text-black text-[10px]">{address}, {city}</p>

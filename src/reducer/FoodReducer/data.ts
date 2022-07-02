@@ -11,6 +11,8 @@ export const FoodInitialData = [
       ],
       "address": "Jl. Barito Makmur Jaya No.13",
       "city": "Surabaya",
+      "user": "Lathifa Itqon",
+      "wa": "628113399490",
       "id": "1"
     },
     {
@@ -25,6 +27,8 @@ export const FoodInitialData = [
       ],
       "address": "Jl.Kolonel Sugiono 3E",
       "city": "Palembang",
+      "user": "Prema Dananjaya",
+      "wa": "6285829139939",
       "id": "2"
     },
     {
@@ -37,6 +41,8 @@ export const FoodInitialData = [
       "type": ["Buah/Sayuran"],
       "address": "Perum Pucang Lestari III Blok C7",
       "city": "Malang",
+      "user": "Ulil Albab",
+      "wa": "6285156472966",
       "id": "3"
     },
     {
@@ -49,6 +55,8 @@ export const FoodInitialData = [
       "type": ["Makanan Berat"],
       "address": "Jl. Panglima Sudirman No.17",
       "city": "Kediri",
+      "user": "Riyaldi Putra",
+      "wa": "6281337318957",
       "id": "4"
     },
     {
@@ -61,6 +69,8 @@ export const FoodInitialData = [
       "type": ["Makanan Ringan"],
       "address": "Jl. KH. Achmad Dahlan IA/07",
       "city": "Bandung",
+      "user": "Diah Ayu",
+      "wa": "6281283380927",
       "id": "5"
     },
     {
@@ -73,10 +83,12 @@ export const FoodInitialData = [
       "type": ["Makanan ringan"],
       "address": "Perum Batu Kencana Blok G No.4",
       "city": "Jakarta",
+      "user": "Rani Sheryl",
+      "wa": "62812345678",
       "id": "6"
     },
     {
-      "name": "Susu Ultramilk UHT 1 Lt",
+      "name": "Susu Ultramilk UHT",
       "image": "/image/7.jpg",
       "description": "Stock berlebih silahkan diambil",
       "amount": 50,
@@ -85,6 +97,8 @@ export const FoodInitialData = [
       "type": ["Minuman"],
       "address": "Jl. Potre Koneng III No. 51 BSA",
       "city": "Surabaya",
+      "user": "Dimas Sucahyo",
+      "wa": "62812345678",
       "id": "7"
     },
     {
@@ -97,6 +111,8 @@ export const FoodInitialData = [
       "type": ["Makanan Ringan"],
       "address": "Dusun Cikareng No.12",
       "city": "city 8",
+      "user": "Nevin Arifin",
+      "wa": "62812345678",
       "id": "8"
     },
     {
@@ -109,6 +125,8 @@ export const FoodInitialData = [
       "type": ["Makanan Berat"],
       "address": "Jl. Kejawan Putih Tambak No.12",
       "city": "Surabaya",
+      "user": "Rumah Penyetan",
+      "wa": "62812345678",
       "id": "9"
     },
     {
@@ -121,6 +139,8 @@ export const FoodInitialData = [
       "type": ["Buah/Sayur"],
       "address": "Desa Sumberejo No.5 Gg. Pangkur",
       "city": "Batu",
+      "user": "Kebun MbokDe",
+      "wa": "62812345678",
       "id": "10"
     }
   ]
