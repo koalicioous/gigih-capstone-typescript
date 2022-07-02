@@ -195,7 +195,7 @@ const DonasiMakanan = () => {
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 justify-end space-x-4 w-full mt-6 mb-20">
+            <div className="grid grid-cols-2 justify-end space-x-4 w-full mt-6 mb-10">
               <Link href="/">
                 <button className="px-4 py-2 rounded-full bg-stone-400 hover:bg-stone-500 font-semibold text-neutral-800 shadow-lg shadow-stone-200 transition ease-in-out duration-200 translate-10">
                     <a>Batalkan</a>
