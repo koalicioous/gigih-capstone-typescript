@@ -29,6 +29,8 @@ const DetailMakanan = () => {
     const data = useSelector((state: {food: Food[]}) => state.food);
     const data_select = data.findIndex((item) => item.id === id_item)
     console.log(data[data_select]?.image)
+    const replaced_address = data[data_select]?.address.split(' ').join('+');
+    console.log(replaced_address)
     return (
         <div className="h-[960px]">
             <div className="bg-white">
@@ -54,7 +56,7 @@ const DetailMakanan = () => {
                         </div>
                         <div className="flex mt-2">
                             <div className="flex items-center p-2 w-auto h-6 text-base text-[12px] font-semibold text-[#431E87] rounded-[25px] outline-1 outline outline-violet-900">
-                                    <h1 className="text-[12px] text-end">Jumlah Tersedia: {data[data_select]?.amount} {data[data_select]?.typeOfAmount}</h1>
+                                    <h1 className="text-[12px] text-end"><b>Jumlah Tersedia :</b> {data[data_select]?.amount} {data[data_select]?.typeOfAmount}</h1>
                             </div>
                         </div>
                         <div className="flex mt-2">
@@ -86,9 +88,11 @@ const DetailMakanan = () => {
                             </a>
                         </div>
                         <div className="mt-[10px]">
-                            <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-red-300  bg-white  text-base text-[12px] font-semibold text-purple-900 rounded-[25px] outline-1 outline outline-violet-900">
-                                Klik untuk lihat lokasi di Google Maps
-                            </button>
+                            <a href={`https://www.google.com/maps/search/?api=1&query=${replaced_address}+${data[data_select].city}`}  target="_blank" rel="noreferrer">
+                                <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-red-300  bg-white  text-base text-[12px] font-semibold text-purple-900 rounded-[25px] outline-1 outline outline-violet-900">
+                                    Klik untuk lihat lokasi di Google Maps
+                                </button>
+                            </a>
                         </div>
                         <div className="mt-[10px]">
                             <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-purple-900 bg-purple-800 text-base text-[12px] font-semibold text-white rounded-[25px] outline-1 outline outline-violet-900">
