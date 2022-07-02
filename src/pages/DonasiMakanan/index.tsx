@@ -18,6 +18,8 @@ type Food = {
     type: string[],
     address: string,
     city: string,
+    user: string,
+    wa: string
 }
 
 const initialFormValue: Food = {
@@ -31,6 +33,8 @@ const initialFormValue: Food = {
     address: '',
     city: '',
     image: '',
+    user: '',
+    wa: ''
 }
 
 const DonasiMakanan = () => {
@@ -69,7 +73,7 @@ const DonasiMakanan = () => {
   }
 
   return (
-    <div className="flex flex-col bg-white">
+    <div className="flex flex-col bg-[#F7EFFA]">
         <Head>
           <title>Publikasi Donasi Makanan</title>
         </Head>
@@ -80,10 +84,10 @@ const DonasiMakanan = () => {
         <div className="px-7">
             <div className="grid grid-cols-1 gap-4">
                 <div className="flex flex-col">
-                  <label htmlFor="nama-makanan" className="font-bold text-sm text-purple-800">Nama Makanan</label>
+                  <label htmlFor="nama-makanan" className="font-bold text-[#240046] text-xs">Nama Makanan</label>
                   <input
                       type="text"
-                      className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                      className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                       id="nama-makanan"
                       placeholder="Masukkan nama makanan"
                       value={formData.name}
@@ -92,10 +96,10 @@ const DonasiMakanan = () => {
                 </div>
 
                 <div className="flex flex-col">
-                    <label htmlFor="foto-makanan" className="font-bold text-sm text-purple-800">Foto Makanan</label>
+                    <label htmlFor="foto-makanan" className="font-bold text-[#240046] text-xs">Foto Makanan</label>
                     <input
                         type="File"
-                        className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                        className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                         id="foto-makanan"
                         placeholder="Upload Foto Makanan"
                         value={formData.image}
@@ -104,9 +108,9 @@ const DonasiMakanan = () => {
                 </div>
 
                 <div className="flex flex-col">
-                    <label htmlFor="deskripsi-makanan" className="font-bold text-sm text-purple-800">Deskripsi Makanan</label>
+                    <label htmlFor="deskripsi-makanan" className="font-bold text-[#240046] text-xs">Deskripsi Makanan</label>
                     <input
-                      className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                      className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                       id="deskripsi-makanan"
                       placeholder="Tuliskan deskripsi makanan..."
                         value={formData.description}
@@ -115,19 +119,19 @@ const DonasiMakanan = () => {
                 </div>
 
                 <div className="flex flex-col">
-                  <label htmlFor="jumlah" className="font-bold text-sm text-purple-800">Jumlah Makanan</label>
+                  <label htmlFor="jumlah" className="font-bold text-[#240046] text-xs">Jumlah Makanan</label>
                     <div className="flex items-center">
                       <input
                         type="text"
                         id="jumlah"
                         placeholder="2"
-                        className="mt-2 mr-2 form-control block w-12 px-3 py-1.5 text-sm font-normal text-gray-700 bg-white  bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                        className="mt-2 mr-2 form-control block w-13 px-3 py-3 text-sm font-normal text-gray-700 bg-white  bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                         value={formData.amount}
                         onChange={(e) => handleFormValueChange('amount', e)}
                       />
                       <select
                         id="pilih-jarak"
-                        className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white  bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                        className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white  bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                         value={formData.typeOfAmount}
                         onChange={(e) => handleFormValueChange('typeOfAmount', e)}
                         >
@@ -140,18 +144,18 @@ const DonasiMakanan = () => {
                 </div>
                   
                 <div className="flex flex-col">
-                    <label htmlFor="date" className="font-bold text-sm text-purple-800">Tanggal Kadaluwarsa</label>
+                    <label htmlFor="date" className="font-bold text-[#240046] text-xs">Tanggal Kadaluwarsa</label>
                     <input
                         type="date"
                         id="date"
-                        className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                        className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                         value={formData.expiration}
                         onChange={(e) => handleFormValueChange('expiration', e)}
                     />
                 </div>
 
                 <div className="flex flex-col">
-                    <label htmlFor="alamat" className="font-bold text-sm text-purple-800 mb-2">Katergori Makanan</label>
+                    <label htmlFor="alamat" className="font-bold text-[#240046] text-xs mb-2">Katergori Makanan</label>
                     <div className="pl-2">
                         <div className="flex items-center mb-2">
                             <input id="buah-sayur" type="checkbox" value="buahSayur" className="w-4 h-4 accent-purple-900" onChange={handleCheckboxChange}/>
@@ -169,14 +173,18 @@ const DonasiMakanan = () => {
                             <input id="minuman" type="checkbox" value="minuman" className="w-4 h-4 accent-purple-900 checked" onChange={handleCheckboxChange} />
                             <label htmlFor="minuman" className="ml-2 text-sm font-semibold text-gray-500 label-checked:text-purple-900">Minuman</label>
                         </div>
+                        <div className="flex items-center mb-2">
+                            <input id="obat" type="checkbox" value="obat" className="w-4 h-4 accent-purple-900 checked" onChange={handleCheckboxChange} />
+                            <label htmlFor="obat" className="ml-2 text-sm font-semibold text-gray-500 label-checked:text-purple-900">Obat</label>
+                        </div>
                     </div>
                 </div>
 
                 <div className="flex flex-col">
-                  <label htmlFor="alamat" className="font-bold text-sm text-purple-800">Lokasi Pengambilan Makanan</label>
+                  <label htmlFor="alamat" className="font-bold text-[#240046] text-xs">Lokasi Pengambilan Makanan</label>
                   <input
                     type="text"
-                    className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                    className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                     id="alamat"
                     placeholder="Jl. Kayangan, Gg. Pantau, Babussalam..."
                     autoComplete="off"
@@ -185,7 +193,7 @@ const DonasiMakanan = () => {
                   />
                   <input
                     type="text"
-                    className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                    className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                     id="alamat"
                     placeholder="Kota/Kabupaten"
                     autoComplete="off"

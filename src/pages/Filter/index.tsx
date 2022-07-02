@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Head from 'next/head';
 const Filter = () => {
     return (
-        <div className="flex flex-col mb-10">
+        <div className="flex flex-col bg-[#F7EFFA] h-[630px]">
             <Head>
                 <title>Filter List Makanan</title>
             </Head>
@@ -13,28 +13,28 @@ const Filter = () => {
             <div className="px-7">
                 <div className="grid grid-cols-1 gap-4">
                     <div className="flex flex-col">
-                        <label htmlFor="alamat" className="font-bold text-sm text-purple-800">Lokasi Anda</label>
+                        <label htmlFor="alamat" className="font-bold text-[#240046] text-xs">Lokasi Anda</label>
                         <input
                             type="text"
-                            className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                            className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                             id="alamat"
                             placeholder="Jl. Kayangan, Gg. Pantau, Babussalam..."
                             />
                         <input
                             type="text"
-                            className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                            className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                             id="alamat"
                             placeholder="Kabupaten/Kota"
                             />
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="pilih-jarak" className="font-bold text-sm text-purple-800">Jarak</label>
+                        <label htmlFor="pilih-jarak" className="font-bold text-[#240046] text-xs">Jarak</label>
                         <div className="grid grid-cols-2 gap-4">
                             <div className="flex flex-col">
                                 <select
                                 id="pilih-jarak"
-                                className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                                className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                                 >
                                     <option>Pilih Jarak</option>
                                     <option>0,5 km</option>
@@ -51,24 +51,24 @@ const Filter = () => {
                                     type="text"
                                     id="jarak"
                                     placeholder="2"
-                                    className="mt-2 mr-2 form-control block w-12 px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                                    className="mt-2 mr-2 form-control block w-[105px] px-4 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                                 />
-                                <p>km</p>
+                                <p className='text-xs'>km</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="date" className="font-bold text-sm text-purple-800">Tanggal Kadaluwarsa</label>
+                        <label htmlFor="date" className="font-bold text-[#240046] text-xs">Tanggal Kadaluwarsa</label>
                         <input
                         type="date"
                         id="date"
-                        className="mt-2 form-control block w-full px-3 py-1.5 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded-md transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
+                        className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                         />
                     </div>
 
                     <div className="flex flex-col">
-                        <label htmlFor="alamat" className="font-bold text-sm text-purple-800 mb-2">Katergori Makanan</label>
+                        <label htmlFor="alamat" className="font-bold text-[#240046] text-xs mb-2">Kategori Makanan</label>
                         <div className="pl-2">
                             <div className="flex items-center mb-2">
                                 <input id="buah-sayur" type="checkbox" value="" className="w-4 h-4 accent-purple-900" />
@@ -90,7 +90,7 @@ const Filter = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 justify-end space-x-4 w-full mt-6">
+                <div className="grid grid-cols-2 justify-end space-x-4 w-full mt-6 mb-15">
                     <Link href="/">
                         <button className="px-4 py-2 rounded-full bg-stone-400 hover:bg-stone-500 font-semibold text-neutral-800 shadow-lg shadow-stone-200 transition ease-in-out duration-200 translate-10">
                             <a>Batalkan</a>
