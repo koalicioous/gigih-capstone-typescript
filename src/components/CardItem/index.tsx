@@ -24,6 +24,7 @@ const CardItem = ({
     food: Food
 }) => {
     const {
+        id,
         name,
         expiration,
         image,
@@ -33,7 +34,7 @@ const CardItem = ({
         wa,
     } = food
     return(
-        <Link href="/DetailMakanan">
+        <Link href={`/DetailMakanan/${id}`}>
             <a className="flex items-center bg-white rounded-lg border shadow-md max-w-xl hover:bg-gray-100 dark:border-white dark:bg-white dark:hover:bg-purple-100 z-10">
                 <img className="object-cover rounded-none rounded-l-lg w-[150px] h-full" src={food.id.length === 1 || food.id.length == 2  ? image : `/image/${Math.floor(Math.random() * (10 - 1 + 1)) + 1}.jpg`} alt=""/>
                 <div className="flex flex-col justify-between leading-normal p-3">
