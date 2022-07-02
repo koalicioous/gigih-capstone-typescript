@@ -1,8 +1,20 @@
+import Link from "next/link";
+import { HiOutlineArrowLeft } from "react-icons/hi";
+import { useRouter } from 'next/router';
+import { useSelector } from "react-redux";
+
 const Header = () : JSX.Element => {
+    const router = useRouter();
+    const id_item = router.query.id
     return (
         <div className="bg-purple-900 sticky top-0 z-[99]">
             <nav className="bg-purple-900 drop-shadow-[0_3px_5px_rgba(0,0,0,0.15)]">
                 <div className="flex justify-center">
+                    <Link href="/ListMakanan">
+                        <button className="position-relative text-base text-[25px] font-semibold text-white rounded-[25px] outline-1 outline-none">
+                            <HiOutlineArrowLeft className="ml-8" style={ id_item ? { display:'block'} : {display : 'none'} }/>
+                        </button>
+                    </Link>
                     <form className="flex items-center w-full px-8 py-4 my-2">   
                         <label htmlFor="search" className="sr-only">Search</label>
                         <div className="relative w-full">

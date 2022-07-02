@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Link from "next/link"
-import { HiOutlineArrowLeft, HiCalendar, HiLocationMarker} from "react-icons/hi";
+import { HiCalendar, HiLocationMarker} from "react-icons/hi";
 import { useRouter } from 'next/router';
 import { useSelector } from "react-redux";
+import Image from "next/image";
 
 type Food = {
     id: string,
@@ -28,20 +28,17 @@ const DetailMakanan = () => {
     const id_item = router.query.id
     const data = useSelector((state: {food: Food[]}) => state.food);
     const data_select = data.findIndex((item) => item.id === id_item)
+    console.log(data[data_select]?.image)
     return (
         <div className="h-[960px]">
             <div className="bg-white">
                 <Head>
                     <title>Detail {data[data_select]?.name}</title>
                 </Head>
-                <div className="z-10 flex bg-cover bg-[url('/image/1.jpg')] h-[375px]">
-                    <Link href="/ListMakanan">
-                        <button className="bg-violet-900/[0.25] flex-initial mx-[21px] my-[21px] h-[43px] w-[43px] bg-[#412C5B]  text-base text-[12px] font-semibold text-white rounded-[25px] outline-1 outline-none" >
-                            <HiOutlineArrowLeft className="ml-[15px]"/>
-                        </button>
-                    </Link>
+                <div className="z-10 flex bg-cover">
+                    <Image className="" src={data[data_select].image} alt="" width={'400px'} height={'400px'}/>
                 </div>
-                <div className="bg-white h-auto shadow-[0px_-4px_6px_rgba(0,0,0,0.25)] rounded-t-[15px] z-30">
+                <div className="bg-white h-auto shadow-[0px_-4px_6px_rgba(0,0,0,0.25)] rounded-t-[15px] z-50">
                     <div className="px-7 py-7">
                         <p className="mb-3 text-xs text-gray-700 dark:text-gray-400">Diposting oleh <b>{data[data_select]?.user}</b></p>
                         <div className="flex items-center gap-2">

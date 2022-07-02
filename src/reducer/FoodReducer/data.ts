@@ -34,7 +34,7 @@ export const FoodInitialData = [
     {
       "name": "Buah Naga Merah",
       "image": "/image/3.jpg",
-      "description": "Buah naga merah hasil memetik dari kebun sendiri, masih segar.",
+      "description": "Buah naga merah hasil memetik dari kebun sendiri, masih segar. Bisa ambil sepuasnya gratis.",
       "amount": 100,
       "typeOfAmount": "buah/pcs",
       "expiration": "18/07/2022",
