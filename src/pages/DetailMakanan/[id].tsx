@@ -95,9 +95,11 @@ const DetailMakanan = () => {
                             </a>
                         </div>
                         <div className="mt-[10px]">
-                            <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-purple-900 bg-purple-800 text-base text-[12px] font-semibold text-white rounded-[25px] outline-1 outline outline-violet-900">
-                                KIRIM PERMINTAAN
-                            </button>
+                            <a href={`https://api.whatsapp.com/send?phone=${data[data_select].wa}&text=Halo%2C%20Saya%20Rosa%20Amalia%20tertarik%20dengan%20penawaran%20donasi%20anda.%20Apakah%20masih%20tersedia%20dan%20saya%20boleh%20mengambilnya%3F`} target="_blank" rel="noreferrer">
+                                <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-purple-900 bg-purple-800 text-base text-[12px] font-semibold text-white rounded-[25px] outline-1 outline outline-violet-900">
+                                    KIRIM PERMINTAAN
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>
