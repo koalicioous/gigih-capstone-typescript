@@ -44,7 +44,9 @@ const Profile = () => {
     return (
         <section className="bg-[#F7EFFA] px-[20px] py-[32px] flex flex-col">
             <div className="w-[77px] h-[77px] bg-gray-200 rounded-full mx-auto">
-
+                <picture>
+                    <img className="mb-3 w-[77px] h-[77px] rounded-full " src ="/image/profil.jpg" alt="Profile Foto"/>
+                </picture>
             </div>
             <p className="text-[#6A6666] text-xs mx-auto mt-4">Bergabung sejak Agustus 2020</p>
             <div>
