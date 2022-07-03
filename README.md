@@ -1,3 +1,18 @@
+## Project Name
+Pesanan (Penyelamat Sampah Makanan)
+
+## Description
+Pesanan (Penyelamat Sampah Makanan) is a website-based application that aims to save food waste. To save food waste, in the application we create a feature to be able to receive and give leftover food that is still good to eat. Thus, the food waste in this world is expected to be reduced.
+
+## Feature
+The features in the Orders application are as follows.
+- Food filters
+- Upload food
+- Receiving food
+- Food donation history
+- History of receiving food donations
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
