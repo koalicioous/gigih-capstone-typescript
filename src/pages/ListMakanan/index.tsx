@@ -17,6 +17,8 @@ type Food = {
     type: string[],
     address: string,
     city: string,
+    user: string,
+    wa: string
 }
 
 type StateData = {
