@@ -25,7 +25,7 @@ const Navbar = () : JSX.Element => {
                         <span className="font-light text-sm">Donate</span>
                     </a>
                 </Link>
-                    <Link href="/profile">
+                    <Link href="/Profile">
                         <a className="flex flex-col items-center justify-center no-underline text-grey-dark border-b-2 border-transparent  tracking-wide font-bold text-xs py-3 px-5 duration-100 ease-in-out hover:text-purple-900 focus:text-purple-900" href="#">
                             <HiUserCircle className="h-5 w-5"></HiUserCircle>
                             <span className="font-light text-sm">Profile</span>

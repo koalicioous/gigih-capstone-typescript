@@ -3,7 +3,7 @@ import Navbar from "../../components/Navbar";
 
 const MobileContainer = ({ children} : {children: React.ReactNode}) => {
   return (
-    <div className="bg-zinc-100 relative">
+    <div className="bg-zinc-200 relative">
         <div className="mx-auto max-w-[390px] bg-white">
           <Header />
           <section>
