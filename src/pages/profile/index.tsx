@@ -9,7 +9,7 @@ const FORM_DATA: {
     },
     {
         label: 'Lokasi Tinggal',
-        text: 'Duri, Bengkalis, Riau',
+        text: 'Jl. Arif Rahman Hakim No.10',
     },
     {
         label: 'E-mail',

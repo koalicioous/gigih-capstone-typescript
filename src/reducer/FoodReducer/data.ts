@@ -97,7 +97,7 @@ export const FoodInitialData = [
       "type": ["Minuman"],
       "address": "Jl. Arif Rahman Hakim No.10",
       "city": "Surabaya",
-      "user": "Dimas Sucahyo",
+      "user": "Rosa Amalia",
       "wa": "62812345678",
       "id": "7"
     },
