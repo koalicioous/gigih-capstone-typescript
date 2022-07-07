@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useState } from "react";
 import { HiCalendar, HiLocationMarker} from "react-icons/hi";
 import { useRouter } from 'next/router';
 import { useSelector } from "react-redux";
@@ -31,6 +32,29 @@ const DetailMakanan = () => {
     console.log(data[data_select]?.image)
     const replaced_address = data[data_select]?.address.split(' ').join('+');
     console.log(replaced_address)
+
+    const [kirimPermintaan, setKirimPermintaan] = useState(false)
+    const [pin, setPin] = useState("")
+    const [tempPin, setTempPin] = useState("")
+
+    const random = (length = 8) => {
+        return Math.random().toString(16).substring(2, length);
+    };
+
+    const changeKirimPermintaan = () => {
+        console.log(kirimPermintaan)
+        setPin(random())
+        setKirimPermintaan(true);
+        console.log(pin)
+    }
+
+    const changeBatalKirimPermintaan = () => {
+        console.log(kirimPermintaan)
+        setKirimPermintaan(false);
+        setTempPin(pin)
+        setPin("")
+    }
+    
     return (
         <div className="h-[960px]">
             <div className="bg-white">
@@ -80,6 +104,13 @@ const DetailMakanan = () => {
                                 <div className="flex-grow border-t border-gray-400 w-full"></div>
                             </div>
                         </div>
+                        <div className="my-2 bg-red-100 flex justify-center items-center">
+                        { pin ? 
+                            <span className="text-gray-400 text-center">PIN Pengambilan : <b>{pin}</b></span>
+                            :
+                            <></>
+                        }    
+                        </div>
                         <div className="mt-[10px]">
                             <a href={`https://wa.me/${data[data_select]?.wa}`} target="_blank" rel="noreferrer">
                                 <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-emerald-300  bg-white  text-base text-[12px] font-semibold text-purple-900 rounded-[25px] outline-1 outline outline-violet-900">
@@ -95,11 +126,21 @@ const DetailMakanan = () => {
                             </a>
                         </div>
                         <div className="mt-[10px]">
-                            <a href={`https://api.whatsapp.com/send?phone=${data[data_select].wa}&text=Halo%2C%20Saya%20Rosa%20Amalia%20tertarik%20dengan%20penawaran%20donasi%20anda.%20Apakah%20masih%20tersedia%20dan%20saya%20boleh%20mengambilnya%3F`} target="_blank" rel="noreferrer">
-                                <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-purple-900 bg-purple-800 text-base text-[12px] font-semibold text-white rounded-[25px] outline-1 outline outline-violet-900">
-                                    KIRIM PERMINTAAN
-                                </button>
-                            </a>
+                            {kirimPermintaan == true ?
+                                <a href={`https://api.whatsapp.com/send?phone=${data[data_select].wa}&text=Halo%2C%20Saya%20Rosa%20Amalia%20tertarik%20dengan%20penawaran%20donasi%20anda.%20Apakah%20masih%20tersedia%20dan%20saya%20boleh%20mengambilnya%3F`}target="_blank" rel="noreferrer">
+                                    <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-purple-300 bg-purple-200 text-base text-[12px] font-bold text-purple-900 rounded-[25px] outline-1 outline outline-violet-900"
+                                    onClick={() => changeBatalKirimPermintaan()}>
+                                        KIRIM PEMBATALAN PERMINTAAN
+                                    </button>
+                                </a>
+                            :
+                                <a href={`https://api.whatsapp.com/send?phone=${data[data_select].wa}&text=Maaf%20saya%20ingin%20membatalkan%20permintaan%20a.n%20Rosa%20Amalia%20dengan%20nomor%20PIN%20Pengambilan%20${tempPin}`} target="_blank" rel="noreferrer">
+                                    <button className="mr-[5px] px-[18px] py-[5px] w-full hover:bg-purple-900 bg-purple-800 text-base text-[12px] font-semibold text-white rounded-[25px] outline-1 outline outline-violet-900"
+                                    onClick={() => changeKirimPermintaan()}>
+                                        KIRIM PERMINTAAN
+                                    </button>
+                                </a>
+                            }
                         </div>
                     </div>
                 </div>
