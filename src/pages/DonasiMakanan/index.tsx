@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Head from "next/head"
-import { HiOutlineChevronLeft } from "react-icons/hi"
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { addFood } from '../../reducer/FoodReducer';
@@ -92,6 +91,7 @@ const DonasiMakanan = () => {
                       placeholder="Masukkan nama makanan"
                       value={formData.name}
                       onChange={(e) => handleFormValueChange('name', e)}
+                      data-testid="nama-makanan"
                     />
                 </div>
 
@@ -113,8 +113,9 @@ const DonasiMakanan = () => {
                       className="mt-2 form-control block w-full px-3 py-3 text-sm font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white  focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                       id="deskripsi-makanan"
                       placeholder="Tuliskan deskripsi makanan..."
-                        value={formData.description}
-                        onChange={(e) => handleFormValueChange('description', e)}
+                      value={formData.description}
+                      onChange={(e) => handleFormValueChange('description', e)}
+                      data-testid="deskripsi-makanan"
                     />
                 </div>
 
@@ -128,6 +129,7 @@ const DonasiMakanan = () => {
                         className="mt-2 mr-2 form-control block w-13 px-3 py-3 text-sm font-normal text-gray-700 bg-white  bg-clip-padding border border-solid border-gray-300 shadow rounded-[20px] transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-purple-900 focus:outline-none focus:ring-purple-900 focus:ring-opacity-50 drop-shadow-sm"
                         value={formData.amount}
                         onChange={(e) => handleFormValueChange('amount', e)}
+                        data-testid="jumlah"
                       />
                       <select
                         id="pilih-jarak"
