@@ -27,6 +27,9 @@ const Home: NextPage = () => {
     <div className="px-7 py-7">
     <div className="z-10 flex bg-cover bg-[url('/image/home-banner.png')] h-[155px] w-auto rounded-lg drop-shadow-lg">
     </div>
+    <h2 className="text-xl font-bold mb-2 text-purple-900 pt-5" >
+        Donasi Terbaru
+    </h2>
     <div className="grid grid-cols-1 gap-4 mt-4">
         {/* <div className="z-10 flex bg-cover bg-[url('/image/list-banner.png')] h-[110px] w-auto rounded-2xl drop-shadow-lg">
         </div> */}
