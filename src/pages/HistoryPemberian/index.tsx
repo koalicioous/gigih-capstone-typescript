@@ -32,7 +32,7 @@ const HistoryPemberian = () => {
                 <title>List Pemberian/Donasi</title>
             </Head>
             <h2 className="text-xl font-bold mb-2 text-purple-900 pt-5 px-5">
-                List Pemberian/Donasi
+                List Pemberian/Donasi Saya
             </h2>
             <div className="px-7 grid grid-cols-1 gap-4">
                 <div className="z-10 flex bg-cover bg-[url('/image/list-banner2.png')] h-[110px] w-auto rounded-2xl drop-shadow-lg">

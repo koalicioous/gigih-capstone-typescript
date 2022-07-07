@@ -3,6 +3,7 @@ import Head from "next/head";
 import { HiFilter } from "react-icons/hi";
 import CardItem from '../../components/CardItem'
 import { useSelector } from 'react-redux'
+import { executeReducerBuilderCallback } from "@reduxjs/toolkit/dist/mapBuilders";
 
 type Food = {
     id: string,
@@ -29,18 +30,21 @@ const HistoryPenerimaan = () => {
     return(
         <div className="">
             <Head>
-                <title>List Pemberian/Donasi</title>
+                <title>List Penerimaan</title>
             </Head>
             <h2 className="text-xl font-bold mb-2 text-purple-900 pt-5 px-5">
-                List Pemberian/Donasi
+                List Penerimaan Saya
             </h2>
             <div className="px-7 grid grid-cols-1 gap-4">
                 {data.map((item,idx) => {
                     return (
+                        !item.user.includes("Rosa Amalia")?
                         <CardItem
                             key={idx}
                             food={item}
                         />
+                        :
+                        <></>
                     )
                 })}
             </div>
