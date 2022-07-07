@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   const data = useSelector((state: {food: Food[]}) => state.food);
   return (
     <div className="px-7 py-7">
-    <div className="z-10 flex bg-cover bg-[url('/image/home-banner.png')] h-[155px] w-auto rounded-lg drop-shadow-lg">
+    <div className="z-10 flex bg-cover bg-[url('/image/home-banner.png')] h-[155px] w-auto rounded-lg drop-shadow-lg" data-testid="song-image">
     </div>
     <h2 className="text-xl font-bold mb-2 text-purple-900 pt-5" >
         Donasi Terbaru
