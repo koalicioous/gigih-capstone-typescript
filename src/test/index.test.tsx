@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import store from '../store/FoodStore/index'
 
 describe('Home', () => {
-  test('renders a heading', () => {
+  test('page rendered', () => {
     render(
       <Provider store={store}>
         <Home/>
